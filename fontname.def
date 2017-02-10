@@ -1,10 +1,10 @@
 \ProvidesFile{fontname.def}
-\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi}]{SimSun}
+\setCJKmainfont[BoldFont={SimHei},ItalicFont={KaiTi_GB2312}]{SimSun}
 \setCJKsansfont{SimHei}
 \setCJKmonofont{FangSong}
 \setCJKfamilyfont{zhsong}{SimSun}
 \setCJKfamilyfont{zhhei}{SimHei}
-\setCJKfamilyfont{zhkai}{KaiTi}
+\setCJKfamilyfont{zhkai}{KaiTi_GB2312}
 \setCJKfamilyfont{zhfs}{FangSong}
 
 \newcommand*{\songti}{\CJKfamily{zhsong}}
