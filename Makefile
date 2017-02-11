@@ -25,8 +25,9 @@ BIBFILE=ref/*.bib
 SPINECONTENTS=$(SPINEMAIN).tex
 CLSFILES=dtx-style.sty $(PACKAGE).cls $(PACKAGE).cfg
 
-.PHONY: all clean distclean dist thesis spine doc cls
+.PHONY: all clean distclean dist thesis spine doc cls default
 
+default: thesis
 all: doc thesis spine
 
 ###### generate cls/cfg
