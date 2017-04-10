@@ -2116,17 +2116,18 @@
 \edate{\ifcase \month \or January\or February\or March\or April\or May%
        \or June\or July \or August\or September\or October\or November
        \or December\fi\unskip,\ \ \the\year}
-\newcommand{\ucas@authtitle}{论文版权使用授权书}
-\newcommand{\ucas@authorization}{%
-本人授权中国科学院计算技术研究所可以保留并向国家有关部门或机构送交本论文的复印件和电子文档，
-允许本论文被查阅和借阅，可以将本论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩
-印或扫描等复制手段保存、汇编本论文。
+\newcommand{\ucas@authtitle}{中国科学院大学 \\ 学位论文授权使用声明}
+\newcommand{\ucas@authorization}{
+    本人完全了解并同意遵守中国科学院有关保存和使用学位论文的规定，即中国科学
+    院有权保留送交学位论文的副本，允许该论文被查阅，可以公布该论文的全部或部
+    分内容，可以采用影印、缩印或其他复制手段保存、汇编本学位论文。
 }
-\newcommand{\ucas@authorizationaddon}{%
-（保密论文在解密后适用本授权书。）}
+\newcommand{\ucas@authorizationaddon}{
+    涉密的学位论文在解密后适用本声明。
+}
 \newcommand{\ucas@authorsig}{作者签名：}
 \newcommand{\ucas@teachersig}{导师签名：}
-\newcommand{\ucas@frontdate}{日期：}
+\newcommand{\ucas@frontdate}{日\phantom{日期}期：}
 \newcommand{\ucas@ckeywords@title}{关键词：}
 %</cfg>
 %    \end{macrocode}
@@ -2138,12 +2139,15 @@
 %<*cfg>
 \newcommand{\ucas@ackname}{致\hspace{1em}谢}
 \newcommand{\ucas@sackname}{致谢}
-\newcommand{\ucas@declarename}{声\hspace{3em}明}
-\newcommand{\ucas@declaretext}{我声明本论文是我本人在导师指导下进行的研究工作及取得的研究
-成果。尽我所知，除了文中特别加以标注和致谢的地方外，本论文中不包含其他人已经发表或撰写过的
-研究成果。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示了谢意。}
+\newcommand{\ucas@declarename}{中国科学大学 \\ 研究生学位论文原创性声明}
+\newcommand{\ucas@declaretext}{
+本人郑重声明：所呈交的学位论文是本人在导师的指导下独立进行研究工作所取得的
+成果。尽我所知，除文中已经注明引用的内容外，本论文不包含任何其他个人或集体
+已经发表或撰写过的研究成果。对论文所涉及的研究工作做出贡献的其他个人和集体，
+均已在文中以明确方式标明或致谢。
+}
 \newcommand{\ucas@signature}{作者签名：}
-\newcommand{\ucas@backdate}{日期：}
+\newcommand{\ucas@backdate}{日\phantom{日期}期：}
 %</cfg>
 %    \end{macrocode}
 %
@@ -2274,22 +2278,28 @@
 % 封面中论文授权部分。
 %    \begin{macrocode}
 \newcommand{\ucas@declare@mk}{%
-\begin{center}\sanhao\heiti{\ucas@declarename}\end{center}
-  \vskip40pt\sihao[2.03]\par
+\begin{center}\setstretch{1.4}\sihao\heiti{\ucas@declarename}\end{center}
+  \vskip10pt\zihao{-4}\par
+  \singlespacing
   \ucas@declaretext\par
   \vskip1.5cm
-  \sihao
-  \hspace{11em}\ucas@signature\hspace{6em}\ucas@backdate
+  \zihao{-4}
+  \hspace{23em}\ucas@signature\par
+  \vskip0.3cm
+  \hspace{23em}\ucas@backdate
 }
 \newcommand{\ucas@authorization@mk}{%
   \vspace*{0.72cm} % shit code!
-  \begin{center}\sanhao\heiti{\ucas@authtitle}\end{center}
-  \vskip40pt\sihao[2.03]\par
+  \begin{center}\setstretch{1.4}\sihao\heiti{\ucas@authtitle}\end{center}
+  \vskip10pt\zihao{-4}\par
+  \singlespacing
   \ucas@authorization\par
   \ucas@authorizationaddon\par
   \vskip1.5cm
-  \sihao
-  \ucas@authorsig\hspace{6em}\ucas@teachersig\hspace{6em}\ucas@frontdate
+  \zihao{-4}
+  \hspace{7em}\ucas@authorsig\hspace{10em}\ucas@teachersig\par
+  \vskip0.3cm
+  \hspace{7em}\ucas@frontdate\hspace{10em}\ucas@frontdate
   }
 %    \end{macrocode}
 % \end{macro}
