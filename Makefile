@@ -157,7 +157,6 @@ clean:
 		*.idx \
 		*.ilg \
 		*.ind \
-		*.ist \
 		*.log \
 		*.out \
 		*.ps \
