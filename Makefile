@@ -25,7 +25,7 @@ BIBFILE=ref/*.bib
 SPINECONTENTS=$(SPINEMAIN).tex
 CLSFILES=dtx-style.sty $(PACKAGE).cls $(PACKAGE).cfg
 
-.PHONY: all clean dist thesis spine doc cls default
+.PHONY: all clean thesis spine doc cls default
 
 default: thesis
 all: doc thesis spine
@@ -149,10 +149,3 @@ clean:
 		*.out *.thm *.toc *.lof *.lot data/*.aux $(EPSGEN) \
 		dtx-style.sty *.cls *.cfg \
 		main.pdf spine.pdf ucasthesis.pdf
-
-dist:
-	@if [ -z "$(VERSION)" ]; then \
-	    echo "Usage: make dist VERSION=<version#>"; \
-	else \
-	    ./makedist.sh $(VERSION) UTF8; \
-	fi
