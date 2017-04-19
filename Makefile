@@ -25,7 +25,7 @@ BIBFILE=ref/*.bib
 SPINECONTENTS=$(SPINEMAIN).tex
 CLSFILES=dtx-style.sty $(PACKAGE).cls $(PACKAGE).cfg
 
-.PHONY: all clean distclean dist thesis spine doc cls default
+.PHONY: all clean dist thesis spine doc cls default
 
 default: thesis
 all: doc thesis spine
@@ -145,33 +145,10 @@ $(SPINEMAIN).pdf: $(SPINEMAIN).dvi
 endif
 
 clean: 
-	-@rm -f \
-		*~ \
-		*.aux \
-		*.bak \
-		*.bbl \
-		*.blg \
-		*.dvi \
-		*.glo \
-		*.gls \
-		*.idx \
-		*.ilg \
-		*.ind \
-		*.log \
-		*.out \
-		*.ps \
-		*.thm \
-		*.toc \
-		*.lof \
-		*.lot \
-		*.loe \
-		data/*.aux \
-		$(EPSGEN) \
-		dtx-style.sty
-
-distclean: clean
-	-@rm -f *.cls *.cfg
-	-@rm -f *.pdf *.tar.gz
+	rm -f *.aux *.bbl *.blg *.glo *.gls *.idx *.ilg *.ind *.log \
+		*.out *.thm *.toc *.lof *.lot data/*.aux $(EPSGEN) \
+		dtx-style.sty *.cls *.cfg \
+		main.pdf spine.pdf ucasthesis.pdf
 
 dist:
 	@if [ -z "$(VERSION)" ]; then \

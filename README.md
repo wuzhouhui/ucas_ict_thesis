@@ -88,7 +88,7 @@ Makefile：
 
     使用方法：
 
-        make [{all|thesis|spine|doc|clean|distclean}] \
+        make [{all|thesis|spine|doc|clean}] \
             [METHOD={xelatex|pdflatex|dvipdfmx}] \
             [TEXI2DVI=<tex2dvi>]
 
@@ -99,8 +99,7 @@ Makefile：
         make thesis    生成论文，相当于 make -f thesis.mak；
         make spine     生成书脊，相当于 make -f spine.mak；
         make doc       生成使用说明书，相当于 make -f doc.mak；
-        make clean     表示清除除了 pdf 外的所有中间文件和目标文件；
-        make distclean 表示清除包括 pdf 在内的所有中间文件和目标文件。
+        make clean     清除所有的中间文件和目标文件；
 
         METHOD 参数用来指定生成 pdf 的方式，
 
